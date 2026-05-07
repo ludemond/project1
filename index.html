@@ -9,16 +9,41 @@
 <body>
 
 <div class="container">
-    <h1>📘 Wordly Dictionary Pro</h1>
+    <div class="header">
+        <h1>📘 Wordly Dictionary Pro</h1>
+        <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+    </div>
 
     <form id="search-form">
         <input type="text" id="word-input" placeholder="Search a word..." />
         <button id="search-btn" type="submit">Search</button>
     </form>
 
+    <div class="controls">
+        <button id="word-of-day-btn" class="control-btn">⭐ Word of the Day</button>
+        <button id="history-btn" class="control-btn">📚 History</button>
+        <button id="favorites-btn" class="control-btn">❤️ Favorites</button>
+    </div>
+
     <div id="loader" class="hidden">Loading...</div>
 
     <div id="results"></div>
+
+    <div id="history-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Search History</h2>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+
+    <div id="favorites-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Favorite Words</h2>
+            <ul id="favorites-list"></ul>
+        </div>
+    </div>
 </div>
 
 <script src="script.js"></script>
